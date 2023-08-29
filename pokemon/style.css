@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Sniglet&display=swap");
+
+body {
+  font-family: "Sniglet", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  background-image: linear-gradient(to right, #f83600 0%, #f9d423);
+}
+
+h1 {
+  color: #fff;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  text-shadow: 4px 3px 6px rgba(0, 0, 0, 1);
+}
+
+.search {
+  position: relative;
+}
+
+.search-input {
+  font-family: inherit;
+  background-color: #fff;
+  border: none;
+  transition: width 0.3s ease;
+  font-size: 16px;
+  padding: 15px;
+  height: 10px;
+  width: 15px;
+  border-radius: 10px;
+}
+
+.search-input,
+.search-button:focus {
+  outline: none;
+}
+
+.search-button {
+  background-color: #264653;
+  border: none;
+  color: #fff;
+  font-size: 33px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.search.active .search-input {
+  width: 200px;
+  background-color: #fff;
+}
+
+.search.active .search-button {
+  transform: translateX(185px);
+  background-color: #fff;
+  color: tomato;
+}
+
+.poke-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 85%;
+  margin-top: 20px;
+}
+
+.pokemon {
+  margin: 10px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  color: #fefefe;
+  border-radius: 10px;
+}
+
+.image-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 200px;
+  height: 120px;
+  border-radius: 75% 30% 60% 40%;
+}
+
+.image-container img {
+  margin-top: 20px;
+  border-radius: 75% 30% 60% 40%;
+  width: 110px;
+  opacity: 0.75;
+  transition: all 0.3s ease;
+}
+
+.pokemon:hover .image-container img {
+  opacity: 1;
+  transform: scale(1.25);
+}
+
+.poke-info {
+  margin-top: 20px;
+}
+
+.poke-id {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 3rem;
+  padding: 5px 10px;
+  font-size: 0.85rem;
+}
+
+.poke-name {
+  letter-spacing: 2px;
+  margin: 15px 0 10px;
+  text-transform: capitalize;
+}
+
+.small small {
+  padding: 0 5px;
+}
+
+.poke-type {
+  margin-top: 10px;
+}
